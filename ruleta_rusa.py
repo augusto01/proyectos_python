@@ -8,10 +8,11 @@ import time
 import random
 import time
 
+intento = False
 def ruleta_rusa():
     tambor = [0, 0, 0, 0, 0, 1]  # 5 posiciones vacías y 1 con una bala
 
-    print("¡Bienvenido a la Ruleta Rusa!")
+
     input("Presiona Enter para jugar...")
 
     print("Girando el tambor...")
@@ -25,5 +26,15 @@ def ruleta_rusa():
     else:
         print("¡BANG! Has perdido...")
 
-# Ejecutar el juego
-ruleta_rusa()
+# EJECUTAR EL JUEGO EN BUCLE
+
+respuesta = input (print('¡Bienvenido a la Ruleta Rusa!, desea jugar ? escribe si o no: '))
+while (respuesta == 'si'):
+    ruleta_rusa()
+    respuesta = input (print('Jugar de nuevo? escribe si o no: '))
+    if respuesta == 'si':
+        ruleta_rusa()
+    else:
+          print("Hasta Pronto !")
+
+
